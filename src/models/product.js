@@ -25,6 +25,10 @@ const productSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  existencia: {
+    type: Number,
+    required: true,
+  },
   imagen: {
     type: String,
     required: true,
