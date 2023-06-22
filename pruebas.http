@@ -5,11 +5,11 @@ post http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "Admin",
-    "username":"Admin",
-    "contraseña":"123456789",
-    "email":"Admin@gmail.com",
-    "rol": "admin"
+    "nombre": "said",
+    "username":"said12",
+    "contraseña":"said12",
+    "email":"said12@gmail.com",
+    "rol": "user"
 }
 
 //obtener todos los usuarios
@@ -78,3 +78,89 @@ Content-Type: application/json
 //removeer un producto 
 ###
 DELETE http://localhost:9000/api/products/648b2e884c803beb4cc758ac HTTP/1.1
+
+
+
+//------------Informacion Empresa-------------------
+
+//agregar un Informacion Empresa
+###
+POST http://localhost:9000/api/EmpresaData HTTP/1.1
+Content-Type: application/json
+
+{
+    "logo": "upn.png",
+    "sobreNosotros": "Todo sobre nosotros",
+    "avisoPrivacidad": "Todo sobre aviso de privacidad ",
+    "direccion": "Carr. Huejutla - Chililico S/N",
+    "telefono": "1238912366",
+    "correo": "upn@gamil.com",
+    "horario": "Lunes a domingo 7:00 a.m. a 7:00 p.m."
+}
+
+//obtener toda la Informacion Empresa
+###
+GET http://localhost:9000/api/EmpresaData HTTP/1.1
+
+//obtener solo un Informacion Empresa
+###
+GET http://localhost:9000/api/EmpresaData/6494b5770ec6abca9f56c127 HTTP/1.1
+
+//actualizar un Informacion Empresa
+###
+PUT http://localhost:9000/api/EmpresaData/6494b5770ec6abca9f56c127 HTTP/1.1
+Content-Type: application/json
+
+{
+    "logo": "upn.png",
+    "sobreNosotros": "Todo sobre nosotrosooooo",
+    "avisoPrivacidad": "Todo sobre aviso de privacidad ",
+    "direccion": "Carr. Huejutla - Chililico S/N",
+    "telefono": "1238912366",
+    "correo": "upn@gamil.com",
+    "horario": "Lunes a domingo 7:00 a.m. a 7:00 p.m."
+}
+
+//removeer un Informacion Empresa 
+###
+DELETE http://localhost:9000/api/EmpresaData/6494b5770ec6abca9f56c127 HTTP/1.1
+
+
+
+
+//------------Informacion Redes sociales-------------------
+
+//agregar un Informacion Redes sociales
+###
+POST http://localhost:9000/api/redesEmpresa HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipo": "whatsapp",
+    "enlace": "whatsapp.http"
+
+}
+
+//obtener toda la Informacion Redes sociales
+###
+GET http://localhost:9000/api/redesEmpresa HTTP/1.1
+
+
+//obtener solo un Informacion Redes sociales
+###
+GET http://localhost:9000/api/redesEmpresa/6494bd0712ed8e725661e6f9 HTTP/1.1
+
+//actualizar un Informacion Redes sociales
+###
+PUT http://localhost:9000/api/redesEmpresa/6494bd0712ed8e725661e6f9 HTTP/1.1
+Content-Type: application/json
+
+{
+    "tipo": "instagram",
+    "enlace": "instagram.http"
+}
+
+//removeer un Informacion Redes sociales 
+###
+DELETE http://localhost:9000/api/redesEmpresa/6494bd0712ed8e725661e6f9 HTTP/1.1
+

@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const userRoutes = require("./src/routes/user");
 const productRoutes = require("./src/routes/product");
-const cors = require('cors');
+const dateEmpresaRoutes = require("./src/routes/infEmpresa");
+const redesSocialesRoutes = require("./src/routes/redesSociales");
+
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -12,9 +15,9 @@ const port = process.env.PORT || 9000;
 app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
 
@@ -24,7 +27,9 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", userRoutes);
-app.use('/api', productRoutes);
+app.use("/api", productRoutes);
+app.use("/api", dateEmpresaRoutes);
+app.use("/api", redesSocialesRoutes);
 
 // MongoDB conexión
 mongoose
