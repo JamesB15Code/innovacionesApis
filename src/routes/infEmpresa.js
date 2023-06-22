@@ -3,7 +3,7 @@ const InfEmpresa = require("../models/infEmpresa");
 const router = express.Router();
 
 //Crear informacion
-router.post("/EmpresaData", (req, res) => {
+router.post("/empresaData", (req, res) => {
   const footers = new InfEmpresa(req.body); 
   footers
     .save()
@@ -12,7 +12,7 @@ router.post("/EmpresaData", (req, res) => {
 });
 
 //Obtener toda informacion
-router.get("/EmpresaData",(req,res)=>{
+router.get("/empresaData",(req,res)=>{
   InfEmpresa
   .find()
   .then((data)=> res.json(data))
@@ -20,7 +20,7 @@ router.get("/EmpresaData",(req,res)=>{
 });
 
 //Obtener informacion por Id
-router.get("/EmpresaData/:id", (req, res)=>{
+router.get("/empresaData/:id", (req, res)=>{
   const {id} = req.params;
   InfEmpresa
   .findById(id)
@@ -29,7 +29,7 @@ router.get("/EmpresaData/:id", (req, res)=>{
 });
 
 //Actualizar informacion
-router.put('/EmpresaData/:id',(req,res)=>{
+router.put('/empresaData/:id',(req,res)=>{
   const {id} = req.params;
   const {logo,sobreNosotros,avisoPrivacidad,direccion,telefono,correo,horario} = req.body;
   InfEmpresa
@@ -39,7 +39,7 @@ router.put('/EmpresaData/:id',(req,res)=>{
 });
 
 //Eliminar informacion
-router.delete('/EmpresaData/:id',(req,res)=>{
+router.delete('/empresaData/:id',(req,res)=>{
   const {id} = req.params;
   InfEmpresa
   .deleteOne({_id:id})
