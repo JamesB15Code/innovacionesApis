@@ -6,6 +6,10 @@ const EmpresaSchema = new Schema({
     type: String,
     required: true,
   },
+  nombre: {
+    type: String,
+    required: true,
+  },
   sobreNosotros: {
     type: String,
     required: true,

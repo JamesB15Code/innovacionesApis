@@ -90,6 +90,7 @@ Content-Type: application/json
 
 {
     "logo": "upn.png",
+    "nombre": "M&G Innovaciones",
     "sobreNosotros": "Todo sobre nosotros",
     "avisoPrivacidad": "Todo sobre aviso de privacidad ",
     "direccion": "Carr. Huejutla - Chililico S/N",
@@ -123,7 +124,7 @@ Content-Type: application/json
 
 //removeer un Informacion Empresa 
 ###
-DELETE http://localhost:9000/api/EmpresaData/6494b5770ec6abca9f56c127 HTTP/1.1
+DELETE http://localhost:9000/api/EmpresaData/649ca7bbd20c47da173dc190 HTTP/1.1
 
 
 
