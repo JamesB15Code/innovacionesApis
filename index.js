@@ -5,6 +5,7 @@ const userRoutes = require("./src/routes/user");
 const productRoutes = require("./src/routes/product");
 const dateEmpresaRoutes = require("./src/routes/infEmpresa");
 const redesSocialesRoutes = require("./src/routes/redesSociales");
+const dateProduct = require("./src/routes/dateProduct")
 
 const cors = require("cors");
 
@@ -30,6 +31,7 @@ app.use("/api", userRoutes);
 app.use("/api", productRoutes);
 app.use("/api", dateEmpresaRoutes);
 app.use("/api", redesSocialesRoutes);
+app.use("/api", dateProduct);
 
 // MongoDB conexión
 mongoose
