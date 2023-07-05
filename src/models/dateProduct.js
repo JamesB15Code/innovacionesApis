@@ -43,11 +43,11 @@ const productSchema = mongoose.Schema({
   },
   imagen3: {
     type: String,
-    required: true,
+    required: false,
   },
   imagen4: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
