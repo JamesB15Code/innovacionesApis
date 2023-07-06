@@ -220,3 +220,45 @@ Content-Type: application/json
 ###
 DELETE http://localhost:9000/api/products/64a4765b849a13a947206763 HTTP/1.1
 
+
+//------------------------------------Prueba-------------------
+//agregar un producto
+###
+POST http://localhost:9000/api/datePrueba HTTP/1.1
+Content-Type: application/json
+
+{
+    "marca": "Motorola",
+    "modelo": "Moto G22",
+    "imagen": "motoG22.png",
+    "imagen2": "motoG23.png",
+    "imagen3": "motoG24.png",
+    "imagen4": "motoG25.png"
+}
+
+//obtener todos los producto
+###
+GET http://localhost:9000/api/datePrueba HTTP/1.1
+
+//obtener solo un producto
+###
+GET http://localhost:9000/api/datePrueba/64a6d40bab17835033d0e3e6 HTTP/1.1
+
+//actualizar un producto
+###
+PUT http://localhost:9000/api/datePrueba/6491fd7e759a46ee7e589442 HTTP/1.1
+Content-Type: application/json
+
+{
+    "marca": "Motorola",
+    "modelo": "Moto G22",
+    "imagen": "motoG22.png",
+    "imagen2": "motoG23.png",
+    "imagen3": "motoG24.png",
+    "imagen4": "motoG25.png"
+}
+
+//removeer un producto 
+###
+DELETE http://localhost:9000/api/datePrueba/64a6d40bab17835033d0e3e6 HTTP/1.1
+
